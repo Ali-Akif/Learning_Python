@@ -1,0 +1,53 @@
+#theses code will probably not work, but it's alright, their purpose is not to be executed
+
+
+
+
+#First thing I learn is using numbers and basic operators
+
+    4+5 #will print 9
+    10%3 #will print 1
+    4+5*3-4/2+6464646/23+2 #will print something I don't need to know :D
+    n/n #to print full div in n.nn ( n is for number )
+    n//n # to only print the integer of the division
+
+
+
+
+#Next is variables
+    
+    age=1
+    #input age on python will get me 1
+    age +=1 #add 1 to age
+    age = 2 * 3 #basics
+    int #for integer ( ...3, 4, 5... )
+    float #for decimals ( ex : 3.5 )
+
+#strings    
+
+    string="string is actually a string"
+    string="what's a string"
+    string='It\'s a string boi.' #\to escape ' or " or \ itself
+    string="I'm not under myself\nI'm not under myself now but under myself from another timeline" 
+    string="""This i how i get 
+    down
+    and down
+    and down
+    without using \\"""
+    a,b = b,a #will switch them
+    a = b = c = 1 #a b c will be set to 1
+
+
+
+
+#Functions
+
+    type(a) #print the type of variable it is
+    type("gnugnugnu") #print str, doesn't need to be a var in the ()
+    
+    print("a=", a) #the same logic as C, will print : a = "value of a"
+    print("a is", a,"b is", b)
+#I've learned how to print Hello world hihihi
+    
+
+
