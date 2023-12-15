@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 annee = input("Saisissez une année : ")  
 annee = int(annee)   #sinon type annee = str
@@ -22,3 +23,6 @@ if content :
    print("hiiiiii il est content")
 else:
    print("tocard")
+
+
+input("Appuyez sur Entrée pour quitter...")
