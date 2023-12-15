@@ -1,12 +1,5 @@
 #learning how to create a function
 
-def table(nb, max=10):
-    """
-erjehhehehe 
-    """
-    i = 0
-    while i < max:
-        i += 1
-        print(i, "*", nb, "=", i * nb)
+a = lambda x, y : x * y
 
-table(8)
+print(a(5,5))   
