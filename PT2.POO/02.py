@@ -1,4 +1,4 @@
-chaine = "" 
+chaine = "" #marche aussi avec chaine = str(), comme int() etc
 while chaine.lower() != "q":
     print("Tapez q pour quitter...")
     chaine = input()
