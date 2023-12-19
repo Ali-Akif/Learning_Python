@@ -10,7 +10,7 @@ index_n = alphabet.index("n")
 
 print(alphabet[index_n:])
 
-
+    
 chaine = "Salut"
 print(len(chaine)) #len() pour sortir le nombre de caractere
 
