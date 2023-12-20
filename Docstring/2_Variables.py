@@ -1,3 +1,7 @@
+# id()
+
+
+
 nombre = 5
 #nom   #objet
 nombre_2 = 5
@@ -46,6 +50,4 @@ print(d)
 
 nombre = input("Entrez un nombre: ")
 print(nombre)
-
-
 

@@ -1,3 +1,7 @@
+#.upper(), .lower(), .capitalize(), .title(), .replace(), .strip(), .rstrip and lstrip, .zfill(),  istitle, isdigit etc, range
+
+
+
 b = "bOnjour tout le monde"
 print(b.upper())
     #BONJOUR TOUT LE MONDE
@@ -96,3 +100,4 @@ b = "image.png"
 print(b.endswith(".png"))
     #True
 print(b.startswith("image"))
+    #True

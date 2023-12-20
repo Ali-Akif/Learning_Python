@@ -1,3 +1,6 @@
+# print(r""), str(), int(), float(), bool()
+
+
 print(r'c:\dossiers\thibault\nouveautes')
 #permet d'échapper les anti slash
 #\a (BEL) \b retour en arriere etc
