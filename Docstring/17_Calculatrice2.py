@@ -9,8 +9,8 @@
 a = b = ""
 
 while not (a.isdigit() and b.isdigit()):  #sans les parenthese: while not a.isdigit() and not b.isdigit()
-    a = input("Entrez un premier nombre : ")
-    b = input("Entrez un deuxième nombre : ")
+    a = input("Entrez un premier nombre entier : ").strip()
+    b = input("Entrez un deuxième nombre entier : ").strip()
     if not (a.isdigit() and b.isdigit()):
         print("Veuillez entrer deux nombres valides")
 

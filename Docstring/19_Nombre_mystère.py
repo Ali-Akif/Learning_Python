@@ -10,7 +10,7 @@ while essais > 0:
     print(f"Il te reste {essais} essai{'s' if essais > 1 else ""}")
     essai_nombre = input("Devine le nombre : ")
 
-    if essai_nombre.isdigit():
+    if essai_nombre.isdigit() and 0 < int(essai_nombre) < 51:
         if int(essai_nombre) == nombre_mystere:
             print(f"Bravo! Le nombre mystère était bien {nombre_mystere}")
             essais-=1

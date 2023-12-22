@@ -18,7 +18,7 @@ Choisissez parmi les 5 options suivantes:
 3: Afficher la liste
 4: Vider la liste
 5: Quitter
-     Votre choix : """)
+     Votre choix : """).strip()
     
     if not reponse.isdigit():
         print("Il faut rentrer un chiffre.")
