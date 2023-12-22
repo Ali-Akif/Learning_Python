@@ -1,5 +1,7 @@
 #.append(), .extend(), .remove(), liste[::], .index(), .count(), .sort(), .sorted(), .reverse(), .pop(), .clear()
 
+
+
 liste = [1, 2, "Python", True]
 #list est réservé en python
 

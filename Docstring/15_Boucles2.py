@@ -56,3 +56,4 @@ nombres_inverses = [i if i % 2 == 0 else -i for i in nombres]
 
 print(nombres_inverses)
 
+#on peut retourner ce qu'on veut, j'aurias pu faire [5 for i in nombres]....

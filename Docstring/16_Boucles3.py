@@ -17,8 +17,9 @@ for i in reversed(mot):
 continuer = "o"
 while continuer == "o":
     print("On continue !")
-    resultat = input("Voulez vous continuer ? o/n ")
+    resultat = input("Voulez vous continuer ? o/n ") #on peut aussi juste faire continuer == input
     if resultat == "n":
         break
     else:
         continue
+
