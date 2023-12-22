@@ -1,39 +1,51 @@
 import random
 
-MENU = "Souhaitez-vous attaquer (1) ou utiliser une potion (2) ? "
 VIE = 50
 VIE_ENNEMI = 50
-JEU = True
-POTION_STOCK = 3
+POTIONS = 3
+SKIP_TURN = False
 
-
-while JEU:  
-    attaque = random.randint(5,10)
-    attaque_ennemi = random.randint(5,15)
-    potion = random.randint(15,50)
-
-    choix_joueur = input(MENU)
-
-    if not choix_joueur.isdigit():
-        continue
-
-    if int(choix_joueur) == 1:
-        VIE_ENNEMI -= attaque
-        VIE -= attaque_ennemi
-        print(f"Vous avez infligé {attaque} points de dégats à l'ennemi !")
-        if VIE_ENNEMI <= 0:
-            print("Bravo ! Vous avez vaincu l'ennemi !")
-            JEU = False
-        print(f"L'ennemi vous à infligé {attaque_ennemi} point de dégats.")
-        if VIE <=0:
-            print("Dommage... L'ennemi vous a battu.")
-            JEU = False
-        else:
-            print(f"""Il vous reste {VIE} points de vie.
-Il reste {VIE_ENNEMI} points de vie à l'ennemi.
---------------------------------------------------------------""")
-     
+while True:
+    #Jeu du joueur
+    if SKIP_TURN == True:
+        print("Vous passez votre tour...")
+        SKIP_TURN = False
     else:
-        continue
+        choix = ""
+        while choix not in ["1", "2"]:
+            choix = input("Souhaitez vous attaquer (1) ou utiliser une potion (2) ? ")
 
-print("Fin")
+        if choix == "1": # Attaque
+            degats = random.randint(5,10)
+            VIE_ENNEMI -= degats
+            print(f"Vous avez infligé {degats} points de dégats à l'ennemi{" !!!" if degats == 10 else "."}⚔️")
+        elif choix == "2" and POTIONS > 0: # Potion
+                popo = random.randint(15,50)
+                VIE += popo
+                POTIONS -= 1
+                SKIP_TURN = True
+                print(f"Vous récupérez {popo} points de vie ❤️ ( {POTIONS} potions restante{"s" if POTIONS > 1 else ""})")
+        else:
+            print("Vous n'avez plus de potions...")
+            continue
+
+
+    if VIE_ENNEMI <= 0:
+        print("Bravo, tu as gagné !")
+        break
+    
+    # Attaque de l'ennemi
+    degats = random.randint(5,15)
+    VIE -= degats
+    print(f"L'ennemi vous a infligé {degats} points de dégats{" !" if degats > 10 else "."} ⚔️")
+
+    if VIE <= 0:
+        print("Dommage, tu as perdu...")
+        break
+    
+    #Stats
+    print(f"Il vous reste {VIE} point{"s" if VIE > 1 else ""} de vie.")
+    print(f"Il reste {VIE_ENNEMI} point{"s" if VIE_ENNEMI > 1 else ""} de vie à l'ennemi.")
+    print("-" * 50)
+    
+print("Fin du jeu.\n")
