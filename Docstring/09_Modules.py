@@ -6,7 +6,7 @@ import random
 import os
 from pprint import pprint
 r = random.randint(0, 2)
-print(r) #print random entre 0, 2
+print(r) #print random entre 0, 2, ils sont inclus dedans 
 
 r = random.uniform(0,1)
 print(r) #0.7290564517735932
