@@ -1,11 +1,18 @@
-user_input = input("Writes numbers : ")
+array_1 = [1,4,6,8,9,10]
+array_2 = [2,3,5,7,8,11,12]
+sorted_array = []
+index1= index2 = 0
 
-user_input = [ int(n) for n in user_input.split() ]
-new_list = user_input[0]
+while index1 < len(array_1) and index2 < len(array_2):
+    
+    if array_1[index1] < array_2[index2]:
+        sorted_array.append(array_1[index1])
+        index1 += 1
+    else:
+        sorted_array.append(array_2[index2])
+        index2 += 1
+    
+sorted_array.extend(array_1[index1:])
+sorted_array.extend(array_2[index2:])
 
-for i in range(1, len(user_input)):
-    new_list += user_input[i]
-
-final = new_list / len(user_input)
-
-print(int(final) if final == int(final) else final)
+print(sorted_array)
