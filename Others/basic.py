@@ -1,18 +1,15 @@
-array_1 = [1,4,6,8,9,10]
-array_2 = [2,3,5,7,8,11,12]
-sorted_array = []
-index1= index2 = 0
+user_choice = 0
 
-while index1 < len(array_1) and index2 < len(array_2):
-    
-    if array_1[index1] < array_2[index2]:
-        sorted_array.append(array_1[index1])
-        index1 += 1
-    else:
-        sorted_array.append(array_2[index2])
-        index2 += 1
-    
-sorted_array.extend(array_1[index1:])
-sorted_array.extend(array_2[index2:])
+while user_choice not in [ "1", "2"]:
+    user_choice = input("Fahrenheit ou Celcius ? 1/2 :")
 
-print(sorted_array)
+user_temp = int(input("Rentrez une température :"))
+
+if user_choice == "1":
+    final = (user_temp - 32) * (5/9)
+    unit = "C"
+else:
+    final = user_temp * ( 9/ 5 ) + 32
+    unit = "F"
+
+print(f"La conversion de {user_temp}{"C" if user_choice == "2" else "F"} en {"Fahrenheit" if user_choice == "22" else "Celcius"} est {final}{unit}.")
