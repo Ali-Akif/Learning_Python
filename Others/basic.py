@@ -12,4 +12,4 @@ else:
     final = user_temp * ( 9/ 5 ) + 32
     unit = "F"
 
-print(f"La conversion de {user_temp}{"C" if user_choice == "2" else "F"} en {"Fahrenheit" if user_choice == "22" else "Celcius"} est {final}{unit}.")
+print(f"La conversion de {user_temp}{"C" if user_choice == "2" else "F"} en {"Fahrenheit" if user_choice == "2" else "Celcius"} est {final}{unit}.")
