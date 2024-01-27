@@ -11,18 +11,23 @@ def get_temperature_input(prompt):
         except ValueError:
             print("Veuillez entrer un nombre valide.")
 
-user_choice = 0
+def main():
+    user_choice = input("Convertir en Fahrenheit ou Celsius ? (1/2) : ")
 
-while user_choice not in ["1", "2"]:
-    user_choice = input("Convertir en Fahrenheit ou Celcius ? 1/2 : ")
+    if user_choice not in ["1", "2"]:
+        print("Choix invalide. Veuillez entrer '1' pour Fahrenheit ou '2' pour Celsius.")
+        return
 
-user_temp = get_temperature_input("Rentrez une température : ")
+    user_temp = get_temperature_input("Rentrez une température : ")
 
-if user_choice == "1":
-    final = convert_to_celsius(user_temp)
-    unit = "C"
-else:
-    final = convert_to_fahrenheit(user_temp)
-    unit = "F"
+    if user_choice == "1":
+        converted_temp = convert_to_celsius(user_temp)
+        from_unit, to_unit = "Fahrenheit", "Celsius"
+    else:
+        converted_temp = convert_to_fahrenheit(user_temp)
+        from_unit, to_unit = "Celsius", "Fahrenheit"
 
-print(f"La conversion de {user_temp}{'C' if user_choice == '1' else 'F'} en {'Fahrenheit' if user_choice == '2' else 'Celcius'} est {final:.2f}{unit}.")
+    print(f"La conversion de {user_temp}°{from_unit} en {to_unit} est {converted_temp:.2f}°{to_unit}.")
+
+if __name__ == "__main__":
+    main()
