@@ -1,17 +1,13 @@
-# Fonction pour obtenir un nombre en entrée de l'utilisateur
-def get_number_input(prompt):
-    while True:
-        try:
-            return float(input(prompt))
-        except ValueError:
-            print("Veuillez entrer un nombre valide.")
+import random
 
-# Obtenir deux nombres de l'utilisateur
-num1 = get_number_input("Entrez le premier nombre : ")
-num2 = get_number_input("Entrez le deuxième nombre : ")
+# Listes d'adjectifs et de noms d'animaux
+adjectifs = ["Super", "Mystérieux", "Invisible", "Volant", "Éclair", "Méga", "Fantastique", "Ultimate", "Magique", "Étonnant"]
+animaux = ["Chat", "Chien", "Oiseau", "Lion", "Panthère", "Aigle", "Dragon", "Faucon", "Renard", "Loup"]
 
-# Calculer la somme
-somme = num1 + num2
+# Générer un nom de super-héros aléatoire
+adjectif = random.choice(adjectifs)
+animal = random.choice(animaux)
+superhero_name = adjectif + " " + animal
 
-# Afficher le résultat
-print(f"La somme de {num1} et {num2} est égale à {somme}.")
+# Afficher le nom de super-héros généré
+print("Votre nom de super-héros est :", superhero_name)
